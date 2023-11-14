@@ -1,0 +1,146 @@
+/* Estilo base */
+:root {
+  --main-color: #f28e13;
+  --secondary-color: #e66807;
+  --grey-light: #d0d0d0;
+  --grey-medium: #8e8e8e;
+  --grey-dark: #333;
+  --error-color: var(--main-color);
+  --transition-speed: 0.3s;
+}
+
+/* Contenedor principal para centrar el contenido */
+.container-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+/*Contenedor interno que separa el navbar y el footer*/
+.container-internal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 120px 0 100px 0;
+
+}
+
+/*Carta o contenedor de campos de información */ 
+.forms-container {
+  position: relative;
+  width: 750px;
+  height: 100%;
+  max-width: 840px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3% 5%;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 60px rgba(0, 0, 0, 0.05) inset;
+}
+
+/* Titulo del documento*/
+.title {
+  font-size: 32px;
+  text-align: center;
+  color: var(--grey-dark);
+  margin-bottom: 25px;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: var(--main-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.icons-register{
+  width: 30px;
+  height: 50px;
+  color: var(--grey-medium);
+}
+
+.edge-input-icon{
+  border-top: 1px solid var(--grey-light);
+  border-bottom: 1px solid var(--main-color);
+  /* border: 1px solid var(--grey-light); */
+  border-radius: 28px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 10px;
+  outline: none; /*Quita la seleccion del campo negro */
+  transition: box-shadow 0.3s; /* Agregar una transición para suavizar el efecto */
+}
+
+.edge-input-icon:active { 
+  border-color: var(--main-color);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(242, 142, 19, 0.2); /* Aplicar box-shadow cuando está enfocado */
+  transition: box-shadow 0.3s; /* Agregar una transición para suavizar el efecto */
+}
+
+
+/* Campos de información */
+.input-field {
+  margin-bottom: 25px;
+}
+
+.input-register {
+  width: 100%;
+  padding: 9px 15px;
+  font-size: 16px;
+  outline: none; /*Quita la seleccion del campo negro */
+}
+
+.text-red-500 {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/*Contenedor para manejar los botones del registro */ 
+.container-buton {
+  padding: 10px;
+  text-align: center;
+}
+
+/*botones del registro */ 
+.btn_register {
+  margin-left: 15px; /*Espacio entre los botones */
+  padding: 12px 24px; /* Espacio entre los margenes del contenedor */
+  background: linear-gradient(to right, var(--main-color), var(--secondary-color)); /* Color de los botones, degradado*/ 
+  border-radius: 28px; /* Suaviza los bordes */
+  color: #fff; /*Color de la letra*/ 
+  font-size: 18px; /* Tamaño de la letra*/
+  cursor: pointer; /*Cuando pasa el cursor muestra la manita para hacer click */
+  transition: all var(--transition-speed); /* Suaviza las transiciones, la velocidad se le da en la variable "transition-speen" declarada al inicio */
+}
+
+/*Transiciones y acciones de los botones cuando el cursor pasa o da click en ellos */
+.btn_register:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de los botones*/
+  background: linear-gradient(to right, var(--secondary-color), var(--main-color)); /*Invierte el degradado */
+}
+
+/* Estilo para el componente textarea */
+.textarea-register {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  resize: vertical; /* Permite redimensionar verticalmente */
+  min-height: 100px; /* Altura mínima */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none; /* Elimina el contorno al hacer clic */
+  
+}
+
+/* Estilo para el placeholder del textarea */
+.textarea-register:active {
+  border-color: var(--main-color);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(242, 142, 19, 0.2); /* Aplicar box-shadow cuando está enfocado */
+  transition: box-shadow 0.3s
+}
+
+

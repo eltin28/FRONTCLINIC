@@ -1,0 +1,42 @@
+.popup-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3% 5%;
+    border-radius: 25px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+}
+  
+  .title-popup {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .text-popup {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+.container-buton-popup{
+    padding: 10px;
+    text-align: center;
+}
+
+.btn-popup {
+    margin-left: 15px; /*Espacio entre los botones */
+    padding: 12px 24px; /* Espacio entre los margenes del contenedor */
+    background: linear-gradient(to right, var(--main-color), var(--secondary-color)); /* Color de los botones, degradado*/ 
+    border-radius: 28px; /* Suaviza los bordes */
+    color: #fff; /*Color de la letra*/ 
+    font-size: 18px; /* Tamaño de la letra*/
+    cursor: pointer; /*Cuando pasa el cursor muestra la manita para hacer click */
+    transition: all var(--transition-speed); /* Suaviza las transiciones, la velocidad se le da en la variable "transition-speen" declarada al inicio */  
+}
+  
+.btn-popup:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de los botones*/
+    background: linear-gradient(to right, var(--secondary-color), var(--main-color)); /*Invierte el degradado */
+}
+  
