@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import NavBar from "../organs/NavBar";
 import Footer from "../organs/Footer";
 import './../Styles/PagesTailwinds.css';
 
-export default function Blogs() {
+export default function Cita() {
     const [searchTerm, setSearchTerm] = useState('');
     const [sortOption, setSortOption] = useState('fecha');
     const [filterOption, setFilterOption] = useState('');

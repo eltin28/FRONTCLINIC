@@ -4,18 +4,9 @@ export const NavLinks = [
         url: "/"
     },
     {
-        name: "Emprendimientos",
-        url: "/Entrepreneurship"
+        name: "Citas",
+        url: "/cita"
     },
-    {
-        name: "Blogs",
-        url: "/Blogs"
-    },
-    {
-        name: "Rutas Turísticas",
-        url: "/TouristRoutes"
-    },
-
 ];
 
 export const GlobalLinks = [
@@ -24,7 +15,7 @@ export const GlobalLinks = [
         url: "/"
     },
     {
-        name: "Ingresar",
+        name: "Login",
         url: "/login"
     },
     {
@@ -32,16 +23,8 @@ export const GlobalLinks = [
         url: "/signup"
     },
     {
-        name: "Emprendimientos",
-        url: "/Entrepreneurship",
-    },
-    {
-        name: "Blogs",
-        url: "/Blogs",
-    },
-    {
-        name: "Rutas Turísticas",
-        url: "/TouristRoutes",
+        name: "Citas",
+        url: "/cita",
     },
 ];
 export const NavButtons = [
@@ -55,33 +38,20 @@ export const NavButtons = [
     }
 
 ];
-
-
-export const HeroTexts = {
-    firstText: "MEJORES DESTINOS ALREDEDOR DEL MUNDO",
-    secondText: "Viaja, disfruta y vive una vida nueva y plena.",
-    thirdText: "Explora nuevas culturas y maravillas naturales en destinos impresionantes en todo el mundo. Descubre la belleza de lugares remotos y la riqueza de experiencias que te esperan.",
-    firstButton: "Ver micrositio Random",
-    secondButton: 'Reproduce la intro'
-}
-
 export const FooterTexts = {
     underLogoText: "Turismo en la cordillera es una empresa colombiana",
     quickLinks: {
         caption: "Página",
         links: [
             {
-                name: "Emprendimientos",
+                name: "Inicio",
                 url: "/"
             },
             {
-                name: "Blogs",
-                url: "/"
+                name: "Citas",
+                url: "/cita"
             },
-            {
-                name: "Rutas Turísticas",
-                url: "/"
-            },
+            
         ]
     },
     contacts: {
