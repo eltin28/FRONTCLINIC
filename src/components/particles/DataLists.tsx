@@ -3,10 +3,6 @@ export const NavLinks = [
         name: "Inicio",
         url: "/"
     },
-    {
-        name: "Citas",
-        url: "/cita"
-    },
 ];
 
 export const GlobalLinks = [
@@ -22,10 +18,7 @@ export const GlobalLinks = [
         name: "Registrarse",
         url: "/signup"
     },
-    {
-        name: "Citas",
-        url: "/cita",
-    },
+
 ];
 export const NavButtons = [
     {
@@ -39,7 +32,7 @@ export const NavButtons = [
 
 ];
 export const FooterTexts = {
-    underLogoText: "Turismo en la cordillera es una empresa colombiana",
+    underLogoText: "EPS a la salud de nuestros usuarios",
     quickLinks: {
         caption: "Página",
         links: [
@@ -47,11 +40,6 @@ export const FooterTexts = {
                 name: "Inicio",
                 url: "/"
             },
-            {
-                name: "Citas",
-                url: "/cita"
-            },
-            
         ]
     },
     contacts: {

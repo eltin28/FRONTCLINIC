@@ -16,19 +16,19 @@ function RegistroComponent() {
     idNumber: '',
     names: '',
     lastNames: '',
-    address: '',
+    gender: '',
     phoneNumber: '',
   });
 
-  const [microSite, setMicroSite] = useState({
-    ventureAddress: '',
-    ventureDescription: '',
-    ventureMapLatitude: '',
-    ventureMapLongitude: '',
-    ventureName: '',
-    microSiteAddress: '',
-    microSiteDescription: '',
-    micrositeExperiences: '',
+  const [doctor, setDoctor] = useState({
+    email: '',
+    password: '',
+    passwordConfirmation: '',
+    idNumber: '',
+    names: '',
+    lastNames: '',
+    consultorio: '',
+    phoneNumber: '',
   });
 
   const [isPasswordsMatch, setIsPasswordsMatch] = useState(true);
@@ -48,27 +48,27 @@ function RegistroComponent() {
       idNumber: formData.get('idNumber') as string,
       names: formData.get('names') as string,
       lastNames: formData.get('lastNames') as string,
-      address: formData.get('address') as string,
+      gender: formData.get('gender') as string,
       phoneNumber: formData.get('phoneNumber') as string,
     });
 
     // Si es una empresa, actualiza microSite usando el formulario
     if (!showUserPanel) {
-      setMicroSite({
-        ventureAddress: formData.get('ventureAddress') as string,
-        ventureDescription: formData.get('ventureDescription') as string,
-        ventureMapLatitude: formData.get('ventureMapLatitude') as string,
-        ventureMapLongitude: formData.get('ventureMapLongitude') as string,
-        ventureName: formData.get('ventureName') as string,
-        microSiteAddress: formData.get('microSiteAddress') as string,
-        microSiteDescription: formData.get('microSiteDescription') as string,
-        micrositeExperiences: formData.get('micrositeExperiences') as string,
+      setDoctor({
+        email: formData.get('email') as string,
+        password: formData.get('password') as string,
+        passwordConfirmation: formData.get('passwordConfirmation') as string,
+        idNumber: formData.get('idNumber') as string,
+        names: formData.get('names') as string,
+        lastNames: formData.get('lastNames') as string,
+        consultorio: formData.get('consultorio') as string,
+        phoneNumber: formData.get('phoneNumber') as string,
       });
     }
 
     if (userInfo.password === userInfo.passwordConfirmation) {
       setIsPasswordsMatch(true); // Reset to true when passwords match
-      console.log(showUserPanel ? userInfo : { ...userInfo, ...microSite });
+      console.log(showUserPanel ? userInfo : { ...userInfo, ...doctor });
     } else {
       setIsPasswordsMatch(false); // Las contraseñas no coinciden
     }
@@ -154,10 +154,10 @@ function RegistroComponent() {
                       className='input-register'
                       type="text"
                       id="address"
-                      name="address"
-                      placeholder="Dirección"
-                      value={userInfo.address}
-                      onChange={(e) => setUserInfo({ ...userInfo, address: e.target.value })}
+                      name="gender"
+                      placeholder="Genero"
+                      value={userInfo.gender}
+                      onChange={(e) => setUserInfo({ ...userInfo, gender: e.target.value })}
                       required
                     />
                   </div>
@@ -236,38 +236,12 @@ function RegistroComponent() {
                     type="text"
                     id="ventureName"
                     name="ventureName"
-                    placeholder="Nombre del Negocio"
-                    value={microSite.ventureName}
-                    onChange={(e) => setMicroSite({ ...microSite, ventureName: e.target.value })}
+                    placeholder="Consultorio"
+                    value={doctor.consultorio}
+                    onChange={(e) => setDoctor({ ...doctor, consultorio: e.target.value })}
                     required
                   />
                 </div>
-              </div>
-              <div className="input-field">
-                <div className='edge-input-icon' tabIndex={0}>
-                  <MapPinLine className="icons-register"></MapPinLine>
-                  <input
-                    className='input-register'
-                    type="text"
-                    id="ventureAddress"
-                    name="ventureAddress"
-                    placeholder="Dirección del Negocio"
-                    value={microSite.ventureAddress}
-                    onChange={(e) => setMicroSite({ ...microSite, ventureAddress: e.target.value })}
-                    required
-                  />
-                </div>
-              </div>
-              <div>
-                <textarea
-                  className='textarea-register'
-                  id="ventureDescription"
-                  name="ventureDescription"
-                  placeholder="Descripción del Negocio"
-                  value={microSite.ventureDescription}
-                  onChange={(e) => setMicroSite({ ...microSite, ventureDescription: e.target.value })}
-                  required
-                ></textarea>
               </div>
               </>
               )}
@@ -290,8 +264,8 @@ function RegistroComponent() {
             </form>
           ) : (
             <div className='container-buton'>
-              <button onClick={showFieldsForUser} className="btn_register">Registro para Usuarios</button>
-              <button onClick={showFieldsForCompany} className="btn_register">Registro para Empresas</button>
+              <button onClick={showFieldsForUser} className="btn_register">Registro para Usuario</button>
+              <button onClick={showFieldsForCompany} className="btn_register">Registro para Doctor</button>
             </div>
           )}
         </div>

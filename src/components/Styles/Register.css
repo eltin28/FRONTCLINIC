@@ -1,7 +1,7 @@
 /* Estilo base */
 :root {
-  --main-color: #f28e13;
-  --secondary-color: #e66807;
+  --main-color: #344790;
+  --secondary-color: #54ACE7;
   --grey-light: #d0d0d0;
   --grey-medium: #8e8e8e;
   --grey-dark: #333;
@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: #EAFAF1;
 }
 
 /*Contenedor interno que separa el navbar y el footer*/
@@ -74,7 +74,7 @@
 .edge-input-icon:active { 
   border-color: var(--main-color);
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(242, 142, 19, 0.2); /* Aplicar box-shadow cuando está enfocado */
+  box-shadow: 0 0 0 3px rgba(19, 97, 242, 0.2); /* Aplicar box-shadow cuando está enfocado */
   transition: box-shadow 0.3s; /* Agregar una transición para suavizar el efecto */
 }
 
@@ -139,7 +139,7 @@
 .textarea-register:active {
   border-color: var(--main-color);
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(242, 142, 19, 0.2); /* Aplicar box-shadow cuando está enfocado */
+  box-shadow: 0 0 0 3px rgba(19, 79, 242, 0.2); /* Aplicar box-shadow cuando está enfocado */
   transition: box-shadow 0.3s
 }
 

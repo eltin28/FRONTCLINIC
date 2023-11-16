@@ -10,7 +10,6 @@ import Profile from './components/pages/panel/Profile.tsx';
 import Users from './components/pages/panel/admin/users/Users.tsx';
 import UserSettings from './components/pages/panel/admin/users/UserSettings.tsx';
 import SignUp from './components/pages/SingUp.tsx';
-import Cita from './components/pages/Cita.tsx';
 import { AuthProvider } from './Auth/AuthProvider.tsx';
 import { ProSidebarProvider } from "react-pro-sidebar";
 
@@ -53,10 +52,6 @@ const router = createBrowserRouter([
         ],
       },
     ]
-  },
-  {
-    path: "/cita",
-    element: <Cita/>
   },
 ])
 

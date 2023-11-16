@@ -7,35 +7,34 @@ export default function Home() {
     const [filterOption, setFilterOption] = useState('');
 
     
-    // Blogs predefinidos
     const blogPosts = [
         {
-            title: "Entre mariposas y cascadas",
-            description: "Bienvenido a Genova, un santuario de mariposas y cascadas.",
-            imageUrl: "/src/assets/ILOVEGENOVA.jpg",
-            author: "Juan Pérez",
-            date: "12 de Noviembre, 2023",
-            category: "Turismo",
-            categoryColor: "bg-blue-200 text-blue-800"
+            title: "Consulta general",
+            description: "Experimentando molestias abdominales y dolor persistente. Consulta médica en el Centro Médico Genova.",
+            imageUrl: "/src/assets/medical-appointment.jpg",
+            author: "Jose, MD",
+            date: "12 de Noviembre, 2023 a las 2:30 pm",
+            category: "Pendiente",
+            categoryColor: "bg-yellow-200 text-red-800"
         },
         {
-            title: "Descubre la hermosa Naturaleza de Genova",
-            description: "Un viaje fotográfico a través de paisajes impresionantes.",
-            imageUrl: "/src/assets/nature-blog.png",
-            author: "Ana Gómez",
-            date: "05 de Noviembre, 2023",
-            category: "Noticias",
-            categoryColor: "bg-green-200 text-green-800"
-        },
-        {
-            title: "Cocina Saludable, todo para disfrutar en Genova",
-            description: "Recetas fáciles y nutritivas para el bienestar diario.",
-            imageUrl: "/src/assets/food-blog.png",
-            author: "Carlos Rodríguez",
-            date: "20 de Octubre, 2023",
-            category: "Tips de Viaje",
+            title: "Lectura de resultados",
+            description: "Sintiendo fatiga constante y dolores musculares. Revisión de resultados de exámenes en Genova Wellness Center.",
+            imageUrl: "/src/assets/health-checkup.png",
+            author: "Natalia",
+            date: "05 de Noviembre, 2023 a las 10:00 am",
+            category: "Cancelada",
             categoryColor: "bg-red-200 text-red-800"
         },
+        {
+            title: "Consulta general",
+            description: "Experimentando problemas digestivos y falta de energía. Consulta para recetas personalizadas en Genova Nutrición.",
+            imageUrl: "/src/assets/nutritional-recipes.jpg",
+            author: "Didier, MD",
+            date: "20 de Octubre, 2023 a las 3:45 pm",
+            category: "Atendida",
+            categoryColor: "bg-blue-200 text-red-800"
+        }
     ];
 
     // Función para convertir string de fecha a objeto Date
@@ -44,7 +43,7 @@ export default function Home() {
         return new Date(`${year}-${month}-${day}`);
     };
 
-    // Función para filtrar y ordenar los blogs
+    // Función para filtrar y ordenar las citas
     const getFilteredAndSortedPosts = () => {
         const filteredPosts = blogPosts.filter(post => 
             (filterOption === '' || post.category === filterOption) &&
@@ -61,11 +60,11 @@ export default function Home() {
 
     return (
         <div className="container-pages bg-gray-100">
-            <div className='container-internal-pages p-4 md:p-12 '>
+            <div className='container-internal-pages bg-[#EAFAF1]'>
                 <div className="mb-8 flex justify-between w-full border-b border-black-500">
                     <input
                         type="text"
-                        placeholder="Buscar en blogs..."
+                        placeholder="Buscar en citas..."
                         onChange={(e) => setSearchTerm(e.target.value)}
                         className="my-4 p-3 border border-gray-300 rounded-lg md:w-2/4 shadow focus:outline-none focus:ring-2 focus:ring-blue-500 ml-8"
                     />
@@ -89,8 +88,8 @@ export default function Home() {
                                 className="p-4 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                             >
                                 <option value="">Todas las Categorías</option>
-                                <option value="Noticias">Noticias</option>
-                                <option value="Tips de Viaje">Tips de Viaje</option>
+                                <option value="Estado">Estado</option>
+                                <option value="Tipo de consulta">Tipo de consulta</option>
                             </select>
                         </div>
                     </div>
